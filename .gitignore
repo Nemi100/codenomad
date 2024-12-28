@@ -1,5 +1,16 @@
-*.sqlite3
-*.pyc
-__pycache__
 env/
+
+templates/allauth/socialaccount/messages/account_disconnected.txt
+templates/allauth/socialaccount/signup.html
+templates/allauth/socialaccount/snippets/login.html
+templates/allauth/socialaccount/snippets/login_extra.html
+templates/allauth/socialaccount/snippets/provider_list.html
+templates/allauth/usersessions/base_manage.html
+templates/allauth/usersessions/messages/sessions_logged_out.txt
+templates/allauth/usersessions/usersession_list.html
+
+*.pyc
+__pycache__/
+db.sqlite3
+media/
 
