@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block extra_title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to CodeNomad!</h1>
+        <p class="lead">Your go-to platform for freelance software development opportunities.</p>
+        <hr class="my-4">
+        <p>Find your next project, collaborate with top developers, and grow your skills.</p>
+        <a class="btn btn-primary btn-lg" href="{'#'}" role="button">Get Started</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Feature 1</h2>
+            <p>Detail about feature 1 that makes CodeNomad unique and valuable.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Feature 2</h2>
+            <p>Detail about feature 2 that enhances user experience and benefits.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Feature 3</h2>
+            <p>Detail about feature 3 that highlights the community aspect of CodeNomad.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
