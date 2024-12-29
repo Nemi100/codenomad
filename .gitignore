@@ -14,3 +14,14 @@ __pycache__/
 db.sqlite3
 media/
 
+# Ignore collected static files
+/staticfiles/
+
+# Ignore specific static directories or files
+/static/css/
+/static/js/
+/static/images/
+/static/vendor/
+
+# Optionally, ignore all static files
+/static/

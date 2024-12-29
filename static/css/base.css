@@ -1,0 +1,193 @@
+/* Base Styles */
+body {
+    padding-top: 80px; /* Adjust padding to avoid overlap with fixed header */
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.navbar, .jumbotron, .card {
+    background-color: white; /* Glossy white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for glossy effect */
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0056b3; /* Hover color */
+}
+
+.card-title {
+    color: #0056b3; /* Card title color */
+}
+
+.alert {
+    margin-top: 1em;
+}
+
+.footer {
+    background-color: #343a40; /* Dark background for footer */
+    color: white;
+}
+
+.footer h5 {
+    margin-top: 0;
+}
+
+.footer a {
+    color: #ffc107; /* Highlight color for links */
+}
+
+.footer a:hover {
+    color: #fff; /* Hover color for links */
+}
+
+/* Social Media Icons */
+.footer .fab {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .fab {
+        font-size: 1.2rem;
+    }
+    .jumbotron {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .fab {
+        font-size: 1.3rem;
+    }
+    .jumbotron {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+    .footer {
+        text-align: left;
+    }
+    .footer .fab {
+        font-size: 1.4rem;
+    }
+    .jumbotron {
+        padding: 4rem 3rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2.25rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .footer {
+        text-align: left;
+    }
+    .footer .fab {
+        font-size: 1.5rem;
+    }
+    .jumbotron {
+        padding: 5rem 4rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .navbar-nav .nav-link {
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-size: 2.75rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2.25rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    .footer {
+        text-align: left;
+    }
+    .footer .fab {
+        font-size: 1.6rem;
+    }
+    .jumbotron {
+        padding: 6rem 5rem;
+    }
+}

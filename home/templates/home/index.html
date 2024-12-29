@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% load static %}
+
+{% block extra_title %}Home{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -11,11 +12,9 @@
     </div>
 {% endblock %}
 
-{% block extra_title %}Home{% endblock %}
-
 {% block content %}
-<div class="container mt-5">
-    <div class="jumbotron">
+<div class="container mt-5 pt-5">
+    <div class="jumbotron bg-white text-center my-5">
         <h1 class="display-4">Welcome to CodeNomad!</h1>
         <p class="lead">Your go-to platform for freelance software development opportunities.</p>
         <hr class="my-4">
@@ -25,18 +24,29 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Feature 1</h2>
-            <p>Detail about feature 1 that makes CodeNomad unique and valuable.</p>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Feature 1</h5>
+                    <p class="card-text">Detail about feature 1 that makes CodeNomad unique and valuable.</p>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-            <h2>Feature 2</h2>
-            <p>Detail about feature 2 that enhances user experience and benefits.</p>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Feature 2</h5>
+                    <p class="card-text">Detail about feature 2 that enhances user experience and benefits.</p>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-            <h2>Feature 3</h2>
-            <p>Detail about feature 3 that highlights the community aspect of CodeNomad.</p>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Feature 3</h5>
+                    <p class="card-text">Detail about feature 3 that highlights the community aspect of CodeNomad.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 {% endblock %}
-
