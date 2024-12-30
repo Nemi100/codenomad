@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'subscribe',
+    'django_cron',
+]
+
+CRON_CLASSES = [
+     "subscribe.cron.CheckSubscriptionsCronJob", 
 ]
 
 MIDDLEWARE = [

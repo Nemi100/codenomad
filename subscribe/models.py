@@ -1,6 +1,6 @@
-import uuid
 from django.db import models
 from django.contrib.auth.models import User
+import uuid
 from datetime import datetime, timedelta
 
 class SubscriptionPlan(models.Model):
@@ -22,6 +22,7 @@ class Subscription(models.Model):
     is_active = models.BooleanField(default=True)
     is_trial = models.BooleanField(default=False)
     email = models.EmailField(blank=True, help_text="Email for anonymous users")
+    trial_ended = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         if not self.id and self.is_trial:
