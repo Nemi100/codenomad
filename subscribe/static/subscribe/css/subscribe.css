@@ -1,0 +1,144 @@
+/* General Container Styling */
+.container {
+  margin-top: 50px;
+}
+
+/* Card Component Styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 15px;
+}
+
+.card-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Form Control Styling */
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  height: auto; /* Ensure the height auto-adjusts */
+  min-height: 40px; /* Set a minimum height */
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group .form-control:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Fieldset Styling */
+fieldset {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+fieldset legend {
+  width: auto;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Alert Styling */
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.btn-black {
+  background-color: #333;
+  border: none;
+  color: #fff;
+}
+
+.btn-black:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.btn-outline-black {
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+}
+
+.btn-outline-black:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+/* Error Message Styling */
+.text-danger {
+  color: #dc3545;
+}
+
+/* Stripe Elements Styling */
+#card-element {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+#card-element.StripeElement--focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+#card-element.StripeElement--invalid {
+  border-color: #dc3545;
+}
+
+#card-errors {
+  margin-top: 10px;
+  color: #dc3545;
+  font-size: 14px;
+}
+
+.submit-button {
+  text-align: right;
+  margin-top: 20px;
+}

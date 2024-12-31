@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'home',
     'subscribe',
     'django_cron',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 CRON_CLASSES = [
@@ -63,6 +65,8 @@ MIDDLEWARE = [
 
 
 ROOT_URLCONF = 'codenomad.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -147,6 +151,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# settings.py
+
+# Stripe API keys
+STRIPE_SECRET_KEY = 'sk_test_51Qbtv4GhHsM8rbqsf4YTmprm18nU4c8BMicTLTAPKOTiwWD1z1hLEFbqKvvmweJ4lv1y3rh84CKc2Ol05RELRGKn00dX8bw8av'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51Qbtv4GhHsM8rbqs7CQPYNRfD20wpUaBYX0UoDA9exWiyyUKqeGahL2q4HDeWX2Hy6pmkNQRysCcREaXlu3y8FKx00ECRZHu38'
 
 
 # Static files (CSS, JavaScript, Images)

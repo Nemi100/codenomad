@@ -26,3 +26,16 @@ class SubscriptionForm(forms.ModelForm):
             self.add_error('plan', 'A subscription plan must be selected.')
 
         return cleaned_data
+
+
+
+class OrderForm(forms.Form):
+    full_name = forms.CharField(max_length=100, required=True)
+    email = forms.EmailField(max_length=100, required=True)
+    phone_number = forms.CharField(max_length=20, required=True)
+    country = forms.CharField(max_length=100, required=True)
+    postcode = forms.CharField(max_length=20, required=True)
+    town_or_city = forms.CharField(max_length=100, required=True)
+    street_address1 = forms.CharField(max_length=100, required=True)
+    street_address2 = forms.CharField(max_length=100, required=False)
+    county = forms.CharField(max_length=100, required=False)
