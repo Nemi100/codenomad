@@ -25,3 +25,26 @@ media/
 
 # Optionally, ignore all static files
 /static/
+
+
+# .gitignore file
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+env/
+venv/
+
+# Ignore Django migration files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+
+# Ignore VS Code settings
+.vscode/

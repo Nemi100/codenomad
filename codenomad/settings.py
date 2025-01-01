@@ -129,6 +129,11 @@ USE_TZ = True
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
 
+
+# Print to verify 
+print("Stripe Secret Key:", STRIPE_SECRET_KEY) 
+print("Stripe Publishable Key:",)
+
 # Currency settings
 DEFAULT_CURRENCY = 'gbp'  # British Pounds
 
