@@ -1,0 +1,52 @@
+<!-- subscriptions/templates/subscriptions/subscribe.html -->
+
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'subscriptions/css/subscribe.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2>Subscribe to Our Plan</h2>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">Choose the best plan that suits you</p>
+                    <form action="{% url 'subscriptions:subscribe' %}" method="POST" id="subscription-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="form-group">
+                            <label for="card-element">Credit or Debit Card</label>
+                            <div id="card-element" class="StripeElement stripe-style-input"></div>
+                            <div id="card-errors" role="alert" class="text-danger"></div>
+                        </div>
+                        <div class="submit-button text-right mt-5 mb-2">
+                            <button id="submit-button" class="btn btn-black rounded-0">
+                                <span class="font-weight-bold">Continue to Payment</span>
+                                <span class="icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div id="id_stripe_public_key" style="display: none;">{{ stripe_public_key }}</div>
+                        <div id="id_client_secret" style="display: none;">{{ client_secret }}</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'subscriptions/js/stripe.js' %}"></script>
+{% endblock %}

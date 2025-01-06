@@ -27,15 +27,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'home',
-    'subscribe',
+    'subscriptions',
     'django_cron',
     'crispy_forms',
     'crispy_bootstrap4',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    #other
+    'djstripe',
 ]
+
+
+SITE_ID = 1
+
 
 CRON_CLASSES = [
     "subscribe.cron.CheckSubscriptionsCronJob", 
@@ -67,20 +75,25 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -132,7 +145,7 @@ STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
 
 # Print to verify 
 print("Stripe Secret Key:", STRIPE_SECRET_KEY) 
-print("Stripe Publishable Key:",)
+print("Stripe Publishable Key:", STRIPE_PUBLISHABLE_KEY)
 
 # Currency settings
 DEFAULT_CURRENCY = 'gbp'  # British Pounds
